@@ -37,6 +37,7 @@ module.exports = {
                 console.log('postParameters', postParameters);
                 const strInsert = "INSERT INTO `my`.`test`(`Name`)VALUES(?);"
                 const sqlParameter = [JSON.stringify(postParameters)];
+                
                // testDb(abc, callback, path, req, response, strInsert, sqlParameter);
             }
             else {
