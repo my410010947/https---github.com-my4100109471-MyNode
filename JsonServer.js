@@ -14,6 +14,7 @@ http.createServer(function (request, response) {
   var extname = path.extname(pathname);
   if ('.json' != extname) {
     response.end('not a json file request\n');
+    console.log('hello world')
     return;
   }
   try {
