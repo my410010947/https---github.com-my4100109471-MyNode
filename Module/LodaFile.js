@@ -1,6 +1,5 @@
 const fs = require('fs');
 const url = require('url');
-const testDb = require('../Module/TestDb')
 const queryString = require('querystring');
 let databaseResult = "";
 
@@ -38,7 +37,7 @@ module.exports = {
                 console.log('postParameters', postParameters);
                 const strInsert = "INSERT INTO `my`.`test`(`Name`)VALUES(?);"
                 const sqlParameter = [JSON.stringify(postParameters)];
-                testDb(abc, callback, path, req, response, strInsert, sqlParameter);
+               // testDb(abc, callback, path, req, response, strInsert, sqlParameter);
             }
             else {
                 fs.readFile(path, (err, data) => {
